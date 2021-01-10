@@ -1,3 +1,7 @@
+<?php
+    require('authentication.php');
+?>
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 <link rel="stylesheet" href="login_style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -11,7 +15,7 @@
     </header>
     <br>
     <div class="login-form">
-    <form action="#" method="post">
+    <form method="post" action="login.php">
         <h2>Login Form</h2>   
         <div class="form-group">
         	<div class="input-group">
@@ -20,7 +24,7 @@
                         <span class="fa fa-user"></span>
                     </span>                    
                 </div>
-                <input type="text" class="form-control" placeholder="Username" required="required">
+                <input type="text" class="form-control" placeholder="Username" name="username" required>
             </div>
         </div>
 		<div class="form-group">
@@ -30,15 +34,15 @@
                         <i class="fa fa-lock"></i>
                     </span>                    
                 </div>
-                <input type="password" class="form-control" placeholder="Password" required="required">
+                <input type="password" class="form-control" placeholder="Password" name="password" required>
             </div>
         </div>     
         <label class="float-left form-check-label"><input type="checkbox"> Remember me</label>   
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block">Log in</button>
+            <button type="submit" class="btn btn-primary btn-block" name="login_btn">Log in</button>
         </div>
         <div class="bottom-action clearfix">
-            <a href="#" class="float-right">Forgot your username or password?</a>
+            <a href="#" class="float-right">Forgot your username <br>or password?</a>
         </div>        
     </form>
 </div>
