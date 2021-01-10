@@ -1,9 +1,8 @@
 <?php
-    require('header.php')
+    require('header.php');
 ?>
-
 <br>
-<h4>Forgotten password or username?</h4>
+<h4>New Submission</h4>
 <br>
 
 <style>
