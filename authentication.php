@@ -4,7 +4,7 @@ session_start();
 // connect to database
 $db = mysqli_connect('localhost', 'root', '', 'mygallery');
 
-/*  Checking if database has connnected successfully
+/*  //Checking if database has connnected successfully
 if ($db) {
     echo 'connected';
   } else {
@@ -40,7 +40,7 @@ function login(){
 			$results = mysqli_query($db, $query);
 
 			if (mysqli_num_rows($results) == 1) { // user found
-                header('location: home.php');   //after login it will go to home.php
+                header('location: submission.php');   //after login it will go to submission.php
 			} else {
 				array_push($errors, "Wrong username/password combination");
 			}
