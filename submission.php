@@ -11,40 +11,124 @@
 <form action="submission.php" method="POST">
 <div class="submission">
     <br>
-        <label id="itemName-label">Item Name:
-        <input type="text" id="itemName" required></label><br><br>
+    <div class="color" style="display: inline;">
+        <div style="float: left; width: 35%">
+            <label id="itemName-label">Item Name:
+        </div>
+        <div style="float: left; width: 35%">
+            <input type="text" id="itemName" required></label><br><br><br>
+        </div>
+    </div>
+    <div class="color" style="display: inline;">
+        <div style="float: left; width: 35%">
         <label id="property">Property:
-        <input type="text" id="property" required></label><br>
-        <label id="roomType">Room Type:
-        <input type="text" id="roomType" required></label><br>
-        <label id="area">Area:
-        <input type="text" id="area" required></label><br><br>
+        </div>
+        <div style="float: left; width: 35%">
+        <input type="text" id="property" required></label><br><br>
+        </div>
+    </div>
+    <div style="display: inline;">
+        <div style="float: left; width: 35%">
+            <label id="roomType">Room Type:
+        </div>
+        <div style="float: left; width: 35%">
+        <input type="text" id="roomType" required></label><br><br>
+        </div>
+    </div>
+    <div style="display: inline;">
+        <div style="float: left; width: 35%">
+            <label id="area">Area:
+            </div>
+        <div style="float: left; width: 35%">
+            <input type="text" id="area" required></label><br><br><br>
+        </div>
+    </div>
+    <div style="display: inline;">
+        <div style="float: left; width: 35%">
         <label id="brand">Brand:
-        <input type="text" id="brand" required></label><br>
-        <label id="model">Model:
-        <input type="text" id="model" required></label><br>
-        <label id="version">Version:
-        <input type="text" id="version" required></label><br><br>
-        <label id="notes">Notes:
-        <input type="text" id="notes" style="height: 100px;" required></label><br>
-        <label id="categories">Categories:
-        <input type="text" id="categories" required></label><br>
+        </div>
+        <div style="float: left; width: 35%">
+        <input type="text" id="brand" required></label><br><br>
+        </div>
+    </div>
+    <div style="display: inline;">
+        <div style="float: left; width: 35%">
+            <label id="model">Model:
+        </div>
+        <div style="float: left; width: 35%">
+            <input type="text" id="model" required></label><br><br>
+        </div>
+    </div>
+    <div style="display: inline;">
+        <div style="float: left; width: 35%">
+            <label id="version">Version:
+        </div>
+        <div style="float: left; width: 35%">
+            <input type="text" id="version" required></label><br><br><br>
+        </div>
+    </div>
+    <div style="display: inline;">
+        <div style="float: left; width: 35%">
+            <label id="notes">Notes:
+        </div>
+        <div style="float: left; width: 35%">
+            <input type="text" id="notes" style="height: 100px;" required></label><br><br>
+        </div>
+    </div>
+    <div style="display: inline;">
+        <div style="float: left; width: 35%">
+            <label id="categories">Categories:
+        </div>
+        <div style="float: left; width: 35%">
+            <input type="text" id="categories" required></label><br><br>
+        </div>
+    </div>
         <!--  Tags  --><br>
-        <label id="linkToOtherItem">Link to <br>other item:
-        <input type="text" id="linkToOtherItem" required></label><br><br><br>
-        <label id="price">Price:
-        <input type="text" id="price" required></label><br>
-
-        <label id="dataPurchased">Data Purchased:
-        <input type="text" id="dataPurchased" required></label><br>
-
-        <label id="proofOfPurchased">Proof of Purchased:</label>
-                <div id="drop_file_zone" ondrop="upload_file(event)" ondragover="return false">
+    <div style="display: inline;">
+        <div style="float: left; width: 35%">
+            <label id="linkToOtherItem">Link to <br>other item:
+        </div>
+        <div style="float: left; width: 35%">
+            <input type="text" id="linkToOtherItem" required></label><br><br><br><br>
+        </div>
+    </div>
+    <div style="display: inline;">
+        <div style="float: left; width: 35%">
+            <label id="price">Price:
+            </div>
+            <div style="float: left; width: 35%">
+                <input type="text" id="price" required></label><br><br>
+            </div>
+    </div>
+    <div style="display: inline;">
+        <div style="float: left; width: 35%">
+            <label id="dataPurchased">Data Purchased:
+        </div>
+        <div style="float: left; width: 35%">
+            <input type="text" id="dataPurchased" required></label><br><br>
+        </div>
+    </div>
+        <div style="display: inline;">
+            <div style="float: left; width: 35%">
+                <label id="proofOfPurchased">Proof of Purchased:</label>
+            </div>
+            <div style="float: left; width: 35%">
+            <div id="drop_file_zone" ondrop="upload_file(event)" ondragover="return false">
                     <div id="drag_upload_file">
                     <p><input class="imageButton" type="button" value="(Click to upload/take a picture)" onclick="file_explorer();"></p>
                     <input type="file" id="selectfile">
                     <input type='file' id="imgInp" style="display:none;"/>
-                </div>          
+                </div> 
+            </div>
+        </div><br><br>
+    <div style="display: inline;">
+        <div style="float: left; width: 35%">
+            <label id="sku">SKU:
+        </div>
+        <div style="float: left; width: 35%">
+            <input type="text" id="sku" required></label><br>
+        </div>
+    </div>  
 </div>
 </form>
 
@@ -63,11 +147,11 @@
     label {
         display: block;
         text-align: left;
+        
     }
 
     .submission {
-        width: 30%;
-        background: #f7f7f7;
+        width: 22%;
     }
 
     input {
@@ -89,10 +173,10 @@
         font-weight: bold;
         color: blue;
         position: absolute;
-        left: 2px;
+        left: 7.9%;
         width: 18.7%;
         height: 25.3%;
-        top: 1125px;
+        top: 139.6%;
         background-color: white;
     }
 
