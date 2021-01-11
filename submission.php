@@ -1,138 +1,156 @@
-<?php
-    require('header.php');
-?>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<br>
-<h4>New Submission</h4>
-<br>
-<div class="line"></div><br>
-<form action="submission.php" method="POST">
-<div class="submission">
-    <br>
-    <div class="color" style="display: inline;">
-        <div style="float: left; width: 35%">
-            <label id="itemName-label">Item Name:
-        </div>
-        <div style="float: left; width: 35%">
-            <input type="text" id="itemName" required></label><br><br><br>
-        </div>
-    </div>
-    <div class="color" style="display: inline;">
-        <div style="float: left; width: 35%">
-        <label id="property">Property:
-        </div>
-        <div style="float: left; width: 35%">
-        <input type="text" id="property" required></label><br><br>
-        </div>
-    </div>
-    <div style="display: inline;">
-        <div style="float: left; width: 35%">
-            <label id="roomType">Room Type:
-        </div>
-        <div style="float: left; width: 35%">
-        <input type="text" id="roomType" required></label><br><br>
-        </div>
-    </div>
-    <div style="display: inline;">
-        <div style="float: left; width: 35%">
-            <label id="area">Area:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+    <body>
+        <?php
+            require('header.php');
+        ?>
+        <br>
+        <h4>New Submission</h4>
+        <br>
+        <div class="line"></div><br>
+        <form action="submission.php" method="POST">
+        <div class="backgroundColor">
+            <div class="submission">
+                <br>
+                <div class="color" style="display: inline;">
+                    <div style="float: left; width: 50%">
+                        <label id="itemName-label">Item Name:
+                    </div>
+                    <div style="float: left; width: 50%">
+                        <input type="text" id="itemName" required></label><br><br><br>
+                    </div>
+                </div>
+                <div class="color" style="display: inline;">
+                    <div style="float: left; width: 50%">
+                    <label id="property">Property:
+                    </div>
+                    <div style="float: left; width: 50%">
+                    <input type="text" id="property" required></label><br><br>
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <div style="float: left; width: 50%">
+                        <label id="roomType">Room Type:
+                    </div>
+                    <div style="float: left; width: 50%">
+                    <input type="text" id="roomType" required></label><br><br>
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <div style="float: left; width: 50%">
+                        <label id="area">Area:
+                        </div>
+                    <div style="float: left; width: 50%">
+                        <input type="text" id="area" required></label><br><br><br>
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <div style="float: left; width: 50%">
+                    <label id="brand">Brand:
+                    </div>
+                    <div style="float: left; width: 50%">
+                    <input type="text" id="brand" required></label><br><br>
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <div style="float: left; width: 50%">
+                        <label id="model">Model:
+                    </div>
+                    <div style="float: left; width: 50%">
+                        <input type="text" id="model" required></label><br><br>
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <div style="float: left; width: 50%">
+                        <label id="version">Version:
+                    </div>
+                    <div style="float: left; width: 50%">
+                        <input type="text" id="version" required></label><br><br><br>
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <div style="float: left; width: 50%">
+                        <label id="notes">Notes:
+                    </div>
+                    <div style="float: left; width: 50%">
+                        <input type="text" id="notes" style="height: 100px;" required></label><br><br>
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <div style="float: left; width: 50%">
+                        <label id="categories">Categories:
+                    </div>
+                    <div style="float: left; width: 50%">
+                        <input type="text" id="categories" required></label><br><br>
+                    </div>
+                </div>
+                    <!--  Tags  --><br>
+                <div style="display: inline;">
+                    <div style="float: left; width: 50%">
+                        <label id="linkToOtherItem">Link to <br>other item:
+                    </div>
+                    <div style="float: left; width: 50%">
+                        <input type="text" id="linkToOtherItem" required></label><br><br><br><br>
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <div style="float: left; width: 50%">
+                        <label id="price">Price:
+                        </div>
+                        <div style="float: left; width: 50%">
+                            <input type="text" id="price" required></label><br><br>
+                        </div>
+                </div>
+                <div style="display: inline;">
+                    <div style="float: left; width: 50%">
+                        <label id="dataPurchased">Data Purchased:
+                    </div>
+                    <div style="float: left; width: 50%">
+                        <input type="text" id="dataPurchased" required></label><br><br>
+                    </div>
+                </div>
+                    <div style="display: inline;">
+                        <div style="float: left; width: 50%">
+                            <label id="proofOfPurchased">Proof of Purchased:</label>
+                        </div>
+                        <div style="float: left; width: 50%">
+                        <div id="drop_file_zone" ondrop="upload_file(event)" ondragover="return false">
+                                <div id="drag_upload_file">
+                                <p><input class="imageButton" type="button" value="(Click to upload/take a picture)" onclick="file_explorer();"></p>
+                                <input type="file" id="selectfile">
+                                <input type='file' id="imgInp" style="display:none;"/>
+                            </div> 
+                        </div>
+                    </div><br><br>
+                <div class="last" style="display: inline;">
+                    <div style="float: left; width: 50%">
+                        <label id="sku">SKU:
+                    </div>
+                    <div style="float: left; width: 50%">
+                        <input type="text" id="sku" required></label><br>
+                    </div>
+                </div>  
             </div>
-        <div style="float: left; width: 35%">
-            <input type="text" id="area" required></label><br><br><br>
+            </form>
         </div>
-    </div>
-    <div style="display: inline;">
-        <div style="float: left; width: 35%">
-        <label id="brand">Brand:
-        </div>
-        <div style="float: left; width: 35%">
-        <input type="text" id="brand" required></label><br><br>
-        </div>
-    </div>
-    <div style="display: inline;">
-        <div style="float: left; width: 35%">
-            <label id="model">Model:
-        </div>
-        <div style="float: left; width: 35%">
-            <input type="text" id="model" required></label><br><br>
-        </div>
-    </div>
-    <div style="display: inline;">
-        <div style="float: left; width: 35%">
-            <label id="version">Version:
-        </div>
-        <div style="float: left; width: 35%">
-            <input type="text" id="version" required></label><br><br><br>
-        </div>
-    </div>
-    <div style="display: inline;">
-        <div style="float: left; width: 35%">
-            <label id="notes">Notes:
-        </div>
-        <div style="float: left; width: 35%">
-            <input type="text" id="notes" style="height: 100px;" required></label><br><br>
-        </div>
-    </div>
-    <div style="display: inline;">
-        <div style="float: left; width: 35%">
-            <label id="categories">Categories:
-        </div>
-        <div style="float: left; width: 35%">
-            <input type="text" id="categories" required></label><br><br>
-        </div>
-    </div>
-        <!--  Tags  --><br>
-    <div style="display: inline;">
-        <div style="float: left; width: 35%">
-            <label id="linkToOtherItem">Link to <br>other item:
-        </div>
-        <div style="float: left; width: 35%">
-            <input type="text" id="linkToOtherItem" required></label><br><br><br><br>
-        </div>
-    </div>
-    <div style="display: inline;">
-        <div style="float: left; width: 35%">
-            <label id="price">Price:
-            </div>
-            <div style="float: left; width: 35%">
-                <input type="text" id="price" required></label><br><br>
-            </div>
-    </div>
-    <div style="display: inline;">
-        <div style="float: left; width: 35%">
-            <label id="dataPurchased">Data Purchased:
-        </div>
-        <div style="float: left; width: 35%">
-            <input type="text" id="dataPurchased" required></label><br><br>
-        </div>
-    </div>
-        <div style="display: inline;">
-            <div style="float: left; width: 35%">
-                <label id="proofOfPurchased">Proof of Purchased:</label>
-            </div>
-            <div style="float: left; width: 35%">
-            <div id="drop_file_zone" ondrop="upload_file(event)" ondragover="return false">
-                    <div id="drag_upload_file">
-                    <p><input class="imageButton" type="button" value="(Click to upload/take a picture)" onclick="file_explorer();"></p>
-                    <input type="file" id="selectfile">
-                    <input type='file' id="imgInp" style="display:none;"/>
-                </div> 
-            </div>
-        </div><br><br>
-    <div style="display: inline;">
-        <div style="float: left; width: 35%">
-            <label id="sku">SKU:
-        </div>
-        <div style="float: left; width: 35%">
-            <input type="text" id="sku" required></label><br>
-        </div>
-    </div>  
-</div>
-</form>
+    </body>
+</html>
 
 <style>
+
+    .backgroundColor {
+        position: absolute;
+        background-color: #f7f7f7;
+        width: 50%;
+        left: 2%;
+    }
 
     h4 {
         font-weight: lighter;  
@@ -152,6 +170,7 @@
 
     .submission {
         width: 22%;
+        height: 147%;
     }
 
     input {
@@ -161,22 +180,22 @@
     /* image design */
 
     #drop_file_zone {
-    background-color: #EEE;
-    border: #999 5px dashed;
-    width: 290px;
-    height: 200px;
-    padding: 8px;
-    font-size: 18px;
+        background-color: #EEE;
+        border: #999 5px dashed;
+        width: 290px;
+        height: 200px;
+        padding: 8px;
+        font-size: 18px;
     }
 
     .imageButton {
         font-weight: bold;
         color: blue;
         position: absolute;
-        left: 7.9%;
-        width: 18.7%;
-        height: 25.3%;
-        top: 139.6%;
+        left: 11.5%;
+        width: 37.1%;
+        height: 17.65%;
+        top: 79.2%;
         background-color: white;
     }
 
