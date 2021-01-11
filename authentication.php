@@ -48,4 +48,14 @@ function login(){
 		}
 }
 
+//user_account - it checks if the user is logged or not
+function isLoggedIn()
+{
+  if (isset($_SESSION['username'])) {
+    return true;
+  }else{
+    return false;
+  }
+}
+
 ?>
