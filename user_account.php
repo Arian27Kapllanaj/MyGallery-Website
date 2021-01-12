@@ -8,11 +8,6 @@
 <body>
     <?php
         require('header.php');
-        require('authentication.php');
-        /*        if (!isLoggedIn()) {
-            $_SESSION['msg'] = "You must log in first";
-            header('location: login.php');
-        } */
     ?>
 
     <br>
@@ -24,10 +19,15 @@
         <div style="float: left; width: 20%">
             <div class="menu">
                     <h4>Menu</h4>
-                    
-                    <?php if(isset($_SESSION['username'])) :
-                             echo $_SESSION['username']; 
-                    endif?>
+                    <div class="MenuLine"></div><br>
+                    <? echo "test" ?>
+                    <br>
+                    <a href="<?php echo "submission.php"; ?>">Your Ztorex</a>
+                    <br>
+                    <a href="<?php echo "submission.php"; ?>">New Submission</a>
+                    <br><br>
+                    <a class="btn btn-primary" href="login.php">Log out</a>
+
             </div>
         </div>
     </div>
@@ -44,6 +44,18 @@
         padding-bottom: 10px;
         border-bottom-style: solid;
         border-width: 1px;
+        width: 98%;
+    }
+
+    .menu {
+        background-color: #f7f7f7;
+        width: 90%;
+    }
+    .MenuLine {
+        padding-bottom: 3px;
+        border-bottom-style: solid;
+        border-width: 0.1px;
+        color: gray;
     }
 
 </style>
