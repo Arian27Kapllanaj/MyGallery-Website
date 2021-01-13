@@ -13,7 +13,7 @@
     <br>
     <div style="display: inline;">
         <div style="float: left; width: 80%">
-            <h4>New Submission</h4>
+            <h4>Your Profile</h4>
             <div class="line"></div><br>
         </div>
         <div style="float: left; width: 20%">

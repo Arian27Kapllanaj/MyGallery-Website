@@ -23,7 +23,7 @@
                     <div class="MenuLine"></div><br>
                     <? echo "test" ?>
                     <br>
-                    <a href="<?php echo "submission.php"; ?>">Your Ztorex</a>
+                    <a href="<?php echo "user_account.php"; ?>">Your Ztorex</a>
                     <br>
                     <a href="<?php echo "submission.php"; ?>">New Submission</a>
                     <br><br>
