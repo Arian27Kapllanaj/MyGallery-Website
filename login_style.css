@@ -32,3 +32,9 @@
 .bottom-action {
     font-size: 14px;
 }
+
+.g-recaptcha {
+    position: absolute !important;
+    left: 40px !important;
+    bottom: 71% !important;
+}
