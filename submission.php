@@ -1,3 +1,12 @@
+<?php
+            require('header.php');
+            require('authentication.php');
+
+            if (!isLoggedIn()) {
+                $_SESSION['msg'] = "You must log in first";
+                header('location: login.php');
+            }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,9 +17,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
     <body>
-        <?php
-            require('header.php');
-        ?>
         <br>
         <div style="display: inline;">
         <div style="float: left; width: 80%">
@@ -22,7 +28,6 @@
                     <h4><strong>Menu</strong></h4>
                     <div class="MenuLine"></div><br>
                     <?  
-                        session_start();
                         echo $_SESSION['username'];
                     ?>
                     <br>
@@ -30,7 +35,7 @@
                     <br>
                     <a href="<?php echo "submission.php"; ?>">New Submission</a>
                     <br><br>
-                    <a class="btn btn-primary" href="login.php">Log out</a>
+                    <a class="btn btn-primary" href="logout.php">Log out</a>
 
             </div>
         </div>
@@ -98,6 +103,7 @@
                 </div>
                 <div style="display: inline;">
                     <div style="float: left; width: 50%">
+                    <br><br>
                         <label id="notes">Notes:
                     </div>
                     <div style="float: left; width: 50%">
@@ -152,9 +158,11 @@
                     </div><br>
                 <div class="last" style="display: inline;">
                     <div style="float: left; width: 50%">
+                    <br>
                         <label id="sku">SKU:
                     </div>
                     <div style="float: left; width: 50%">
+                    <br>
                         <input type="text" id="sku" required></label><br>
                     </div>
                 </div>  
@@ -222,10 +230,10 @@
         font-weight: bold;
         color: blue;
         position: absolute;
-        left: 11.5%;
+        left: 11.6%;
         width: 37.1%;
-        height: 17.65%;
-        top: 79.2%;
+        height: 17.1%;
+        top: 77.6%;
         background-color: white;
     }
 

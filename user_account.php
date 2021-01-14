@@ -1,3 +1,13 @@
+<?php
+        require('header.php');
+        require('authentication.php');
+
+        if (!isLoggedIn()) {
+            $_SESSION['msg'] = "You must log in first";
+            header('location: login.php');
+        }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +16,7 @@
     <title>User Account</title>
 </head>
 <body>
-    <?php
-        require('header.php');
-    ?>
+
 
     <br>
     <div style="display: inline;">
@@ -20,13 +28,15 @@
             <div class="menu">
                     <h4><strong>Menu</strong></h4>
                     <div class="MenuLine"></div><br>
-                    <? echo "test" ?>
+                    <?  
+                        echo $_SESSION['username'];
+                    ?>
                     <br>
                     <a href="user_account.php">Your Ztorex</a>
                     <br>
                     <a href="submission.php">New Submission</a>
                     <br><br>
-                    <a class="btn btn-primary" href="login.php">Log out</a>
+                    <a class="btn btn-primary" href="logout.php">Log out</a>
 
             </div>
         </div>
