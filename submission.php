@@ -207,7 +207,7 @@
     }
 
     .submission {
-        width: 22%;
+        width: 32%;
         height: 147%;
     }
 
@@ -230,7 +230,7 @@
         font-weight: bold;
         color: blue;
         position: absolute;
-        left: 11.6%;
+        left: 16.5%;
         width: 37.1%;
         height: 17.1%;
         top: 77.6%;

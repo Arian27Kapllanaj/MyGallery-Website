@@ -18,7 +18,7 @@
     require('header.php');
     require('authentication.php');
 ?>
-
+    <div class="display: block">
     <br>
         <div class="login-form">
             <form method="post" action="login.php">
@@ -45,23 +45,35 @@
                 </div>     
                 <label class="float-left form-check-label"><input type="checkbox"> Remember me</label>   
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block" name="login_btn">Log in</button>
+                    <button id="submitBtn" disabled type="submit" class="btn btn-primary btn-block" name="login_btn">Log in</button>
                 </div>
                 <div class="bottom-action clearfix">
                     <a href="forgot.php" class="float-right">Forgot your username <br>or password?</a>
-                </div>        
+                </div>   
+                <div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LcqeywaAAAAAB9OtFiiz6nkD5qVh4EGA9tonDhi"></div>      
             </form>
 
         </div>
         </div>
-
-           <div class="g-recaptcha" data-sitekey="6LcqeywaAAAAAB9OtFiiz6nkD5qVh4EGA9tonDhi"></div> 
-
         
-        
+           </div>
 </body>
 </html>
 
+<style>
+    .g-recaptcha {
+    position: absolute !important;
+    left: 40px !important;
+    bottom: 71% !important;
+}
+</style>
+
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
     async defer>
+</script>
+
+<script>
+    function recaptchaCallback() {
+        $('#submitBtn').removeAttr('disabled');
+    };
 </script>
