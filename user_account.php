@@ -18,13 +18,13 @@
         </div>
         <div style="float: left; width: 20%">
             <div class="menu">
-                    <h4>Menu</h4>
+                    <h4><strong>Menu</strong></h4>
                     <div class="MenuLine"></div><br>
                     <? echo "test" ?>
                     <br>
-                    <a href="<?php echo "submission.php"; ?>">Your Ztorex</a>
+                    <a href="user_account.php">Your Ztorex</a>
                     <br>
-                    <a href="<?php echo "submission.php"; ?>">New Submission</a>
+                    <a href="submission.php">New Submission</a>
                     <br><br>
                     <a class="btn btn-primary" href="login.php">Log out</a>
 
@@ -56,6 +56,10 @@
         border-bottom-style: solid;
         border-width: 0.1px;
         color: gray;
+    }
+
+    h4 {
+        font-weight: lighter;  
     }
 
 </style>

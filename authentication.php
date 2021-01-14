@@ -25,7 +25,7 @@ if (isset($_POST['login_btn'])) {
 function login(){
 
     global $db, $username, $errors;
-    
+
     // grap form values
     $username = ($_POST['username']);
     $password = ($_POST['password']);    
@@ -39,7 +39,8 @@ function login(){
 			$query = "SELECT * FROM users WHERE username='$username' AND password='$password' LIMIT 1";
 			$results = mysqli_query($db, $query);
 
-			if (mysqli_num_rows($results) == 1) { // user found
+      if (mysqli_num_rows($results) == 1) { // user found
+                $_SESSION['username'] = $username;
                 header('location: submission.php');   //after login it will go to submission.php
 			} else {
 				array_push($errors, "Wrong username/password combination");

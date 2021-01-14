@@ -19,9 +19,12 @@
         </div>
         <div style="float: left; width: 20%">
             <div class="menu">
-                    <h4>Menu</h4>
+                    <h4><strong>Menu</strong></h4>
                     <div class="MenuLine"></div><br>
-                    <? echo "test" ?>
+                    <?  
+                        session_start();
+                        echo $_SESSION['username'];
+                    ?>
                     <br>
                     <a href="<?php echo "user_account.php"; ?>">Your Ztorex</a>
                     <br>
@@ -146,7 +149,7 @@
                                 <input type='file' id="imgInp" style="display:none;"/>
                             </div> 
                         </div>
-                    </div><br><br>
+                    </div><br>
                 <div class="last" style="display: inline;">
                     <div style="float: left; width: 50%">
                         <label id="sku">SKU:
@@ -163,6 +166,13 @@
 
 <style>
 
+    body {
+        width:100%;
+        height:100%;
+        position: absolute;
+        margin: 0;
+    }
+    
     .backgroundColor {
         position: absolute;
         background-color: #f7f7f7;
@@ -179,6 +189,7 @@
         padding-bottom: 10px;
         border-bottom-style: solid;
         border-width: 1px;
+        width: 98%;
     }
 
     label {
