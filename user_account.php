@@ -23,7 +23,56 @@
         <div style="float: left; width: 80%">
             <h4>Your Profile</h4>
             <div class="line"></div><br>
+            <form action="#" method="post">
+            <div class="color" style="display: inline;">
+                    <div style="float: left; width: 15%">
+                    <label id="username">Username:
+                    </div>
+                    <div style="float: left; width: 85%">
+                    <input type="text" id="username" placeholder="[CANNOT BE CHANGED]" disabled></label><br><br>
+                    </div>
+                </div>
+
+                <div class="color" style="display: inline;">
+                    <div style="float: left; width: 15%">
+                    <label id="password">Password*:
+                    </div>
+                    <div style="float: left; width: 85%">
+                    <input type="text" id="password" required></label><br><br>
+                    </div>
+                </div>
+
+                <div class="color" style="display: inline;">
+                    <div style="float: left; width: 15%">
+                    <label id="confirmPassword">Confirm Password*:
+                    </div>
+                    <div style="float: left; width: 85%">
+                    <input type="text" id="confirmPassword" required ></label><br><br>
+                    </div>
+                </div>
+
+                <div class="color" style="display: inline;">
+                    <div style="float: left; width: 15%">
+                    <label id="email">Email address*:
+                    </div>
+                    <div style="float: left; width: 85%">
+                    <input type="text" id="email" required></label><br><br>
+                    </div>
+                </div>
+
+                <div class="color" style="display: inline;">
+                    <div style="float: left; width: 15%">
+                    <label id="confirmEmail">Confirm email address*:
+                    </div>
+                    <div style="float: left; width: 85%">
+                    <input type="text" id="confirmEmail" required></label><br><br>
+                    </div>
+                </div>
+                <button id="submitBtn" type="submit" class="btn btn-primary btn-block" name="login_btn">Submit</button>
         </div>
+
+        
+        </form>
         <div style="float: left; width: 20%">
             <div class="menu">
                     <h4><strong>Menu</strong></h4>
@@ -42,7 +91,6 @@
         </div>
     </div>
 
-        
 
 
 </body>
@@ -70,6 +118,15 @@
 
     h4 {
         font-weight: lighter;  
+    }
+
+    input {
+        width: 50%;
+    }
+
+    #submitBtn {
+        position: inherit;
+
     }
 
 </style>
