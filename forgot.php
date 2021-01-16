@@ -1,5 +1,5 @@
 <?php
-    require('header.php')
+    require('header.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +15,7 @@
     <br>
     <h4>Forgotten password or username?</h4>
     <br>
-    <form action="forgot.php" method="post"></form>
+    <form action="phpmailer/vendor/email.php" method="post">
         <div class="color" style="display: inline;">
             <div style="float: left; width: 10%">
                     <label id="email-label">Email address:
