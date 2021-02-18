@@ -1,6 +1,7 @@
 <?php
-    session_start();
-    session_destroy();
-    header('Location: login.php');
-    exit;
-?>
+require_once("config.php");
+
+$auth->logOut();
+
+header("Location:login-form.php");
+die();
