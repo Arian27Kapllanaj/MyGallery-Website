@@ -3,6 +3,7 @@ require_once("config.php");
 
 try {
     if (isset($_POST['remember'])) {
+        //header("location: home.php");
         // keep logged in for one year
         $rememberDuration = (int) (60 * 60 * 24 * 365.25);
     }
@@ -11,12 +12,15 @@ try {
         $rememberDuration = null;
     }
 
-    $auth->login($_POST['email'], $_POST['password'], $rememberDuration);
+    $auth->loginWithUsername($_POST['username'], $_POST['password'], $rememberDuration);
 
     echo 'User is logged in, duration=' . $rememberDuration;
 }
-catch (\Delight\Auth\InvalidEmailException $e) {
-    die('Wrong email address');
+catch (\Delight\Auth\UnknownUsernameException $e) {
+    die('Wrong username');
+}
+catch(\Delight\Auth\AmbiguousUsernameException $e) {
+    die('Wrong username');
 }
 catch (\Delight\Auth\InvalidPasswordException $e) {
     die('Wrong password');
@@ -27,3 +31,11 @@ catch (\Delight\Auth\EmailNotVerifiedException $e) {
 catch (\Delight\Auth\TooManyRequestsException $e) {
     die('Too many requests');
 }
+
+?>
+
+<script>
+var timer = setTimeout(function() {
+    window.location='home.php'
+}, 0001);
+</script>
