@@ -25,9 +25,10 @@
                 </div>
         </div>
 
-        <div class="g-recaptcha" data-sitekey="6LcqeywaAAAAAB9OtFiiz6nkD5qVh4EGA9tonDhi"></div>  
+		<div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LcqeywaAAAAAB9OtFiiz6nkD5qVh4EGA9tonDhi"></div>
         <br><br>
         <button id="submitBtn" type="submit" class="btn btn-primary btn-block" name="submit">Submit</button>
+                
     </form>
 </body>
 </html>
@@ -51,4 +52,10 @@
 
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
     async defer>
+</script>
+
+<script>
+    function recaptchaCallback() {
+        $('#submitBtn').removeAttr('disabled');
+    };
 </script>
