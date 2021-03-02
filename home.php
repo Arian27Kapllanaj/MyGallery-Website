@@ -1,10 +1,13 @@
 <?php
 require_once("config.php");
-
 if ($auth->isLoggedIn()) {
     require('header.php');
-    
-    ?>
+}
+else {
+    header("Location:login-form.php");
+    die();
+}
+?>
  <!DOCTYPE html>
  <html lang="en">
 
@@ -117,7 +120,7 @@ if ($auth->isLoggedIn()) {
                                                      <label for="inputEmail"
                                                          class="col-sm-2 col-form-label">Tags:</label>
                                                      <div class="col-sm-10">
-                                                         <input type="text" class="form-control" name="">
+                                                         <input type="text" class="form-control" name="tags">
 
                                                      </div>
                                                  </div><br>
@@ -240,9 +243,9 @@ if ($auth->isLoggedIn()) {
                         echo 'Hi, '.$username;
                     ?>
                          <br>
-                         <a href="user_account.php">Your Ztorex</a>
+                         <a href="search.php">Your Ztorex</a>
                          <br>
-                         <a href="home.php">New Submission</a>
+                         <a href="user_account.php">Your Profile</a>
                          <br><br>
                          <a class="btn btn-primary" href="logout.php">Log out</a>
 
@@ -298,10 +301,3 @@ var tagify = new Tagify(input, {
         }
     }
 </script>
-
- <?php
-}
-else {
-    header("Location:login-form.php");
-    die();
-}
