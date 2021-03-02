@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 15, 2021 at 12:29 PM
+-- Generation Time: Mar 02, 2021 at 06:18 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.29
 
@@ -18,8 +18,37 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `auth`
+-- Database: `mygallery`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `form_submission`
+--
+
+CREATE TABLE `form_submission` (
+  `id` int(11) NOT NULL,
+  `user_id` int(15) NOT NULL,
+  `item_name` varchar(255) NOT NULL,
+  `property` varchar(255) NOT NULL,
+  `room_type` varchar(255) NOT NULL,
+  `area` varchar(255) NOT NULL,
+  `brand` varchar(255) NOT NULL,
+  `model` varchar(255) NOT NULL,
+  `version` varchar(255) NOT NULL,
+  `notes` text NOT NULL,
+  `categories` varchar(255) NOT NULL,
+  `tags` varchar(500) NOT NULL,
+  `link_to_otherItem` varchar(255) NOT NULL,
+  `price` float NOT NULL,
+  `data_purchased` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `picture` varchar(255) NOT NULL,
+  `location1` varchar(255) NOT NULL,
+  `location2` varchar(255) NOT NULL,
+  `sku` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
