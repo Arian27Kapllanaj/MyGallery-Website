@@ -125,7 +125,7 @@ if ($conn->connect_error) {
 
                                 <?php 
                                  $id = $auth->getUserId();
-                                $sql = "SELECT * FROM form_submission Where user_id = '".$id."' ORDER BY area ASC";
+                                $sql = "SELECT * FROM form_submission Where user_id = '".$id."' ORDER BY brand ASC";
                                 $result = $conn->query($sql);
                                 
                                 if ($result->num_rows > 0) {
@@ -139,8 +139,8 @@ if ($conn->connect_error) {
                                             <div class="card-body">
                                                 <img src="uploads/<?php echo $row['picture'] ?>" width="180" height="180">
                                                 <p> <?php echo "<strong>".$row['item_name']."</strong>" ?><br>
-                                                <?php echo $row['area'] ?>
-                                                 </p>
+                                                <?php echo $row['brand'] ?>
+                                                </p>
 
                                             </div>
                                         </div>
@@ -215,7 +215,6 @@ if ($conn->connect_error) {
     width: 99%;
 }
 </style>
-
 <?php
 }
 else {
